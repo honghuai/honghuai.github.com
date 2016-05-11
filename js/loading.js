@@ -79,9 +79,9 @@ $(".start").click(function() {
     toShow(".page-pintu");
 });
 /*进入第四屏-炫耀一下*/
-$("#createImg").click(function() {
-    toShow(".page-create");
-});
+// $("#createImg").click(function() {
+//     toShow(".page-create");
+// });
 /*进入分享蒙层*/
 $(".flauntBtn").click(function() {
     toShow(".page-mask");
@@ -95,9 +95,9 @@ $(".wall-back").click(function() {
     toShow(".page-create");
 });
 /*情书墙返回到重新玩游戏*/
-$(".wall-again").click(function() {
-    toShow(".page-pintu");
-});
+// $(".wall-again").click(function() {
+//     toShow(".page-pintu");
+// });
 /*点击蒙层消失*/
 $(".page-mask").click(function() {
     toShow(".page-create");

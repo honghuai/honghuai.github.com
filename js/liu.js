@@ -62,7 +62,8 @@ $(function () {
             container.graphics.drawRect(1, '#000000', [lastLayer.x, lastLayer.y, layerWidth, layerHeight], true, '#fff');
         });
         /* 清空 */
-        $('#reset').on('click', function () {
+
+        function resetCanvas(){
             for (var i = 0; i < row; i++) {
                 for (var j = 0; j < col; j++) {
                     var left = i * layerWidth;
@@ -71,7 +72,9 @@ $(function () {
                 }
             }
             history = [];
-        });
+            $(".desMyProjectInput").val("");
+        }
+        $('#reset').on('click', resetCanvas);
         /* 生成图片 */
         $("#createImg").on('click', function () {
             var des = $(".desMyProjectInput").val();
@@ -85,7 +88,20 @@ $(function () {
             $(".page-pintu").hide();
             $('.page-create').show();
             $("#creatDes strong").text(des);
+            $("#createImg").click(function() {
+                toShow(".page-create");
+            });
         });
+
+
+        /*情书墙返回到重新玩游戏*/
+        $(".wall-again").click(function() {
+            resetCanvas();
+            setTimeout(function(){
+                toShow(".page-pintu");
+            },0)
+        });
+
     }
 
 });
