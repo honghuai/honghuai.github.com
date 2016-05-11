@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="description" content="冷酸灵·520情书招募计划"/>
+    <script type="text/javascript">
+        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+
+    </script>
+    <link rel="stylesheet" href="css/index.css"/>
+    <title></title>
+</head>
+<body>
+<!--加载页-->
+<div class="page page-load">
+    <div class="box">
+        <img src="img/loading_box.png" alt="" class="loadingBox" />
+        <span class="progress">0%</span>
+    </div>
+</div>
+<!--首页-->
+<div class="page page-index hidden">
+    <div class="love">
+        <div class="a520Img">
+            <img src="img/font_520_5.png" alt=""/>
+            <img src="img/font_520_2.png" alt=""/>
+            <img src="img/font_520_0.png" alt=""/>
+        </div>
+        <div class="">
+            <img class="plan" src="img/tip_love.png" alt=""/>
+            <img class="lslLog" src="img/tip_lsl.png" alt=""/>
+            <img class="start" src="img/btn_start.png" alt=""/>
+        </div>
+    </div>
+</div>
+<!--拼图界面-->
+<div class="page page-pintu">
+    <div class="pintuSpace"></div>
+    <div id="canvasWrap">
+        <div id="canvas"></div>
+    </div>
+    <div class="desMyProject">
+        <img src="img/tip_msg.png" alt=""/>
+        <div class="inputWrap">
+            <input type="text" class="desMyProjectInput" placeholder="请描述一下你的神作吧..."/>
+            <strong>（限8字以内）</strong>
+        </div>
+    </div>
+    <ul class="circleList">
+        <li class="circles circles-color1"></li>
+        <li class="circles circles-color2"></li>
+        <li class="circles circles-color3"></li>
+        <li class="circles circles-color4"></li>
+        <li class="circles circles-color5"></li>
+        <li class="circles circles-color6"></li>
+        <li class="circles circles-color7"></li>
+        <li class="circles circles-color8"></li>
+        <li class="circles circles-color9"></li>
+        <li class="circles circles-color10"></li>
+        <li class="circles circles-color11"></li>
+        <li class="circles circles-color12"></li>
+    </ul>
+    <div class="operation">
+        <img src="img/btn_revocation.png" id="goBack" alt=""/>
+        <img src="img/btn_create.png" id="createImg" alt=""/>
+        <img src="img/btn_clean.png" id="reset"  alt=""/>
+    </div>
+</div>
+<!--生成作品-->
+<div class="page page-create">
+    <div class="pintuSpace"></div>
+    <div id="creatImgWrap"></div>
+    <p id="creatDes">
+        <span>#</span>
+        <strong>是独立开发建设力度</strong>
+        <span>#</span>
+    </p>
+    <p class="longPress">长按作品即可将作品保存到手机中哦</p>
+    <div class="operation">
+        <img src="img/btn_flaunt.png" class="flauntBtn" alt=""/>
+        <img src="img/btn_wall.png" class="wallBtn"  alt=""/>
+    </div>
+
+</div>
+<!--分享蒙版-->
+<div class="page page-mask hidden">
+    <div class="box">
+        <img class="uploadImg" src="img/loading_upload.png" alt=""/>
+        <img class="loadingBox" src="img/loading_box.png" alt="" />
+    </div>
+</div>
+<!--情书墙-->
+<div class="page page-wall hidden">
+    <div class="wall-title">
+        <img src="img/tip_wall520.png" alt=""/>
+    </div>
+    <ol class="wall-content">
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+        <li class="wall-li">
+            <img src="img/static-create.png" alt=""/>
+            <div class="msg">
+                <span>作品：001</span>
+                <span>名称：今天有一只玛丽</span>
+            </div>
+        </li>
+    </ol>
+    <div class="tip">
+        (向上滑动查看更多拼图作品哦~)
+    </div>
+    <div class="wall-btn">
+        <img class="wall-back" src="img/btn_back.png" alt=""/>
+        <img class="wall-again" src="img/btn_again.png" alt=""/>
+    </div>
+</div>
+<!--分享出去后显示的页面-->
+<div class="page page-share">
+
+</div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/loading.js"></script>
+<script src="js/lufylegend.js"></script>
+<script src="js/faskclick.js"></script>
+<script src="js/liu.js"></script>
+</html>
