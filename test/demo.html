@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Event</title>
+    <style>
+        .wrap{
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .floatDiv>div{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="faskclick.js"></script>
+    <script src="lufylegend.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div id="tester"></div>
+    <!--<div class="floatDiv"></div>-->
+</div>
+
+
+<div id="goback">退后</div>
+<div id="reset">撤销</div>
+
+<script>
+    init(1, "tester", 500, 500, main);
+    var stage;
+
+    function main() {
+        LGlobal.setDebug(false);
+
+        trace("on debug");
+
+        /* 包裹层 */
+        var container = new LSprite();
+        addChild(container);
+
+        /* 初始化每个layer */
+        var layers = [];
+        var width = 50;
+        var history = [];
+        var $floatDiv = $('<div class="floatDiv"></div>');
+        for(var i = 0;i<10;i++){
+            for(var j = 0;j<10;j++){
+                container.graphics.drawRect(1, '#000000', [i* 50, j*50, 50, 50], true, '#fff');
+                var $div = $('<div></div>').css({left:i* 50,top:j*50}).data({x:i*50,y:j*50});
+                $div.appendTo($floatDiv)
+            }
+        }
+        $floatDiv.appendTo('.wrap');
+        $floatDiv.find('div').on('click', function () {
+            var $this = $(this);
+            var x = $this.data('x');
+            var y = $this.data('y');
+            container.graphics.drawRect(0,'',[x,y,50,50],true,'red');
+            history.push( { x:x,y:y } );
+        });
+
+        $('#goback').on('click', function () {
+            var lastLayer = history.pop();
+            if (!lastLayer) {
+                return false;
+            }
+            container.graphics.drawRect(1, '#000000', [lastLayer.x, lastLayer.y, 50, 50], true, '#fff');
+        });
+        $('#reset').on('click',function(){
+            for(var i = 0;i<10;i++){
+                for(var j = 0;j<10;j++){
+                    container.graphics.drawRect(1, '#000000', [i* 50, j*50, 50, 50], true, '#fff');
+                }
+            }
+            history = [];
+        })
+    }
+
+
+</script>
+</body>
+</html>
