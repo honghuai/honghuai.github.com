@@ -1,0 +1,169 @@
+/*common styles*/
+html, body, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dd, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+img{
+    border:0;
+    vertical-align: top;
+}
+input,
+select,
+textarea {
+    outline:none;
+}
+textarea {
+    resize: none;
+}
+a {
+    text-decoration: none;
+}
+.hidden{
+    display: none;
+}
+.tpl-page-conn{
+    background: url("../images/bg_index.png") 100% 100%;
+    background-size: cover;
+}
+.tac{
+    text-align: center;
+}
+/*index.html*/
+.btn_search{
+    float: right;
+}
+.index_title {
+    background: url("../images/logo_coreone.png") center center no-repeat;
+    height: 35px;
+}
+.block .caseWrap{
+    margin-right: -28px;
+    overflow: hidden;
+}
+.caseWrapLi{
+    text-align: center;
+    height: 125px;
+    width: 118px;
+    float: left;
+    /*margin-right: 28px;*/
+    margin-bottom: 55px;
+}
+.caseWrapLi .innerLi{
+    height: 100px;
+}
+.caseWrapLi img{
+    width: 85px;
+}
+.caseWrapLi .p-name{
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 50px;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+/*aside module*/
+#aside_detail .cur{
+    color: #ffffff;
+}
+#aside_detail .inner{
+    text-align: center;
+}
+
+#aside_detail .a_aLi{
+    text-align: center;
+    font-size: 28px;
+}
+.aside_close{
+    text-align: right;
+    margin-top: 85px;
+    margin-bottom: 10px;
+    padding-right: 27px;
+}
+#aside_detail .active .inner{
+    display: block;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+}
+#aside_detail .inner li a{
+    font-size: 28px;
+    padding: 0;
+    line-height: 50px;
+}
+.p-call, .p-email {
+    display: block;
+    font-size: 1.6em;
+    text-align: center;
+    color: #ffffff;
+    line-height: 1.6em;
+}
+
+.aside_footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.communite{
+    width: 183px;
+    height: 56px;
+    margin: 0 auto;
+}
+.communite a {
+    float: left;
+    width: 42px;
+    height: 47px;
+    background-repeat: no-repeat;
+    background-image: url("../images/links_click_before.png");
+    /*
+    background-color: #282828;
+    */
+}
+.communite a.wx{
+    background-position: 0 0;
+}
+.communite a.xeibo{
+    background-position: -42px 0;
+}
+.communite a.net_in{
+    background-position: -84px 0;
+}
+.communite a.net_f{
+    background-position: -126px 0;
+}
