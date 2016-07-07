@@ -1,0 +1,155 @@
+.index_title{
+    background-image: none;
+}
+.index_title p{
+    text-align: center;
+    font-size: 30px;
+    color: #333333;
+    line-height: 0;
+}
+.menu-trigger:before {
+    background: #34495e;
+    box-shadow: 0 6px #fff, 0 12px #34495e, 0 18px #fff, 0 24px #34495e;
+}
+.content {
+    padding-top: 115px;
+}
+.block-40{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+}
+
+
+
+
+.middle{
+    padding: 0 47px 58px 47px;
+}
+.middle .maxImg{
+    width: 124%;
+    margin-left: -12%;
+}
+.part .bigTitle{
+    font-size: 30px;
+    color: #333333;
+    padding-top: 55px;
+    font-weight: bold;
+}
+.part .smallTitle{
+    font-size: 26px;
+    color: #333333;
+    padding-top: 20px;
+}
+.part .des{
+    font-size: 22px;
+    line-height: 40px;
+    color: #999999;
+    padding-top: 38px;
+}
+.middle .part hr{
+    margin: 34px 0 22px 0;
+    border: 2px solid #999999;
+}
+.middle form{
+    color: #666666;
+    font-size: 22px;
+}
+.middle form label{
+    margin: 18px 0 14px 0;
+    display: block;
+}
+.middle form input{
+    width: 100%;
+    padding: 0 10px;
+    line-height: 46px;
+}
+.middle form textarea{
+    width: 100%;
+    resize: none;
+}
+.middle form button{
+    margin-top: 30px;
+    width: 100px;
+    height: 48px;
+    background: #333333;
+    border: 0;
+    color: #fff;
+}
+.table{
+    width: 100%;
+    color: #999999;
+    font-size: 22px;
+    line-height: 22px;
+    background: transparent;
+}
+.table tr{
+    background: #f7f7f7;
+    line-height: 46px;
+    margin: 10px 0;
+    display: block;
+    overflow: hidden;
+}
+.table td{
+    width: 60%;
+    display: inline-block;
+    float: left;
+    padding-left: 10px;
+}
+.table td:nth-last-child(1){
+    width: 40%;
+}
+.detail{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition:all .5s ease;
+}
+.detail .title{
+    font-size: 30px;
+    line-height: 90px;
+    color: #333333;
+    position: relative;
+    text-align: center;
+}
+.detail .remove{
+    position: absolute;
+    right:60px;
+    top: 0px;
+}
+.detail hr{
+    border: 2px solid #dcdcdc;
+}
+.editButton{
+    position: absolute;
+    right: 45px;
+    top: 40px;
+    width: 28px;
+    height: 30px;
+    background: url("../images/edit_bg.png") no-repeat;
+}
+.message{
+    margin-top: 20px;
+}
+.row{
+    line-height: 40px;
+    color: #999999;
+    font-size:22px;
+}
+.row a{
+    color: #999999;
+}
+.row.icon{
+    background: url("../images/arrow.png") 95% 50% no-repeat;
+}
+.row.icon a{
+    color: #666;
+}
+
+.message{
+
+}
