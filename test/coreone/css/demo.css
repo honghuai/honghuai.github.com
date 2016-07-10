@@ -145,7 +145,7 @@ a:hover, a:focus {
 }
 
 .content {
-	padding: 0 1em 2em;
+	padding: 0 0 2em;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -164,10 +164,11 @@ a:hover, a:focus {
 }
 
 .block .caseWrap {
-	margin: 0;
-	padding: 1em 1em 0.6em;
+	margin: 0 -30px;
+	padding: 1em 0 0.6em;
 	font-size: 1.8em;
 	line-height: 1.5;
+	width: 112%;
 }
 
 .info {

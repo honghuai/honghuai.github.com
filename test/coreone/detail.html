@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth / 640;
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+    <meta name="description" content="上海可望创意设计有限公司，位于上海市黄浦区延安东路175号旺角广场1503室。联系电话：021-63330619 " />
+    <meta name="keywords" content="上海可望创意设计有限公司"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<div class="top">
+    <div class="goBack"></div>
+    <p class="title">作家榜</p>
+    <div class="info"></div>
+</div>
+<div class="content">
+    <img src="images/connection_us_img.png" alt="" class="maxImg">
+    <img src="images/connection_us_img.png" alt="" class="maxImg">
+    <img src="images/connection_us_img.png" alt="" class="maxImg">
+    <img src="images/connection_us_img.png" alt="" class="maxImg">
+    <div class="pagination">
+        <div class="pre">上一页</div>
+        <div class="next">下一页</div>
+    </div>
+</div>
+
+
+<div class="detail">
+    <div class="title">
+        <p>填写需求</p>
+        <div class="remove">X</div>
+    </div>
+    <hr>
+    <div class="middle">
+        <div class="bigTitle">作家榜</div>
+        <div class="smallTitle">zuojiabang.cn</div>
+        <div class="tag">网页  APP  标志  KV  活动</div>
+        <div class="font">家喻户晓的作家富豪榜，简称作家榜，是全球第一个持续追踪记录作家群体生态变化，反映全民阅读潮流走向的超级文化品牌，致力于推动全民阅读时代到来与文化产业繁荣发展，自2006年创立以来，一年一度的中国作家榜文化盛典，已经成为亚洲规模最大、影响最强的文化盛会，每年引爆全球媒体关注，让中国作家群体和华语原创文学变得举世瞩目，受到文化部、作家群体、出版机构、书店、全球媒体、亿万读者的广泛赞誉，是公认的“中国文化界奥斯卡”，更是发掘助推新人新作、放大版权价值的最佳平台。</div>
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-3.0.0.js"></script>
+<script src="js/hammer.min.js"></script>
+<script>
+    var $detail = $('.detail')
+    $(".info").on('click', function () {
+        $detail.css('top', 0);
+    })
+    $detail.find('.remove').on('click', function () {
+        $detail.css('top', "100%");
+    })
+
+    function swiperLeft () {
+        console.log('下一页')
+    }
+
+    function swiperRight () {
+        console.log('上一页')
+    }
+
+    $(".content").hammer().on({
+        'swipeleft':swiperLeft,
+        'swiperight': swiperRight
+    })
+</script>
+
+</html>

@@ -3,7 +3,7 @@
  * 初始化左侧伸缩菜单栏事件
  * */
 if(document.getElementById( 'trigger')) {
-    new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+    new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ),{backClass: 'J_aside_close'});
 }
 
 /**
@@ -11,7 +11,7 @@ if(document.getElementById( 'trigger')) {
  * 触发关闭/打开菜单按钮事件
  * @param {object} e - 触发该事件的对象
  */
-$("#J_aside_close").click(function(e){
+$("#J_aside_close").on('touchstart',function(e){
     $("#trigger").trigger(e).hide();
     setTimeout(function(){
         $("#trigger").show();
@@ -32,7 +32,7 @@ $("html,body").click(function(){
  * @module mp-menu
  * 隐藏菜单控制按钮
  * */
-$("#trigger").click(function(){
+$("#trigger").on('touchstart',function(){
     $("#trigger").hide();
 })
 
@@ -40,17 +40,16 @@ $("#trigger").click(function(){
  * @module mp-menu
  * 显示左侧栏二级菜单内容
  * */
-$("#aside_detail").delegate(".a_aLi","mouseover",function() {
-    $(this).addClass("active");
+$("#aside_detail").delegate(".arrow_down","click",function() {
+    var $this = $(this).parent();
+    if($this.hasClass('active')){
+        $this.removeClass("active")
+        return false
+    }
+    $('.a_aLi').removeClass("active")
+    $this.addClass('active')
 })
 
-/**
- * @module mp-menu
- * 隐藏左侧栏二级菜单内容
- * */
-$("#aside_detail").delegate(".a_aLi","mouseout",function() {
-    $(this).removeClass("active");
-})
 
 /**
  * @module detail.html
@@ -155,4 +154,16 @@ $("#sub_info").click(function() {
 $("#aside_detail").delegate(".a_aLi","click",function(){
     $("#aside_detail").find("a").removeClass("cur");
     $(this).children("a").addClass("cur");
+})
+
+var $searchWrap = $('.searchWrap')
+var $searchBlur = $('.searchBlur')
+$('.btn_search').on('click',function(){
+    $searchWrap.height('100%')
+    $('.searchContent').focus();
+    // $('.scroller-inner').addClass('blur')
+})
+$searchBlur.on('click',function(){
+    $searchWrap.hide().height(0).delay(500).show()
+    // $('.scroller-inner').removeClass('blur')
 })

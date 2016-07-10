@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.maxImg{
+    width: 100%;
+}
+.top{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    line-height: 90px;
+    border-bottom: 2px solid #e8e8e8;
+    background: #fff;
+}
+.goBack{
+    position: absolute;
+    background: url("../images/arrow_left.png") no-repeat;
+    width: 16px;
+    height: 28px;
+    left: 48px;
+    top: 30px;
+}
+.top .title{
+    text-align: center;
+    color: #333333;
+    font-size: 30px;
+}
+.top .info{
+    position: absolute;
+    background: url("../images/detail_info.png") no-repeat;
+    width: 28px;
+    height: 28px;
+    right: 48px;
+    top: 30px;
+}
+.pagination{
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+.pagination>div{
+    display: inline-block;
+    font-size: 24px;
+    color: #666666;
+}
+.pre{
+    padding-left: 20px;
+    background: url("../images/arrow_left.png") 0 50% no-repeat;
+    margin-right: 110px;
+}
+.next{
+    padding-right: 20px;
+    background: url("../images/arrow_right.png") 100% 50% no-repeat;
+}
+
+
+.detail{
+    position: fixed;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition:all .5s ease;
+}
+.detail .title{
+    font-size: 30px;
+    line-height: 90px;
+    color: #333333;
+    position: relative;
+    text-align: center;
+}
+.detail .remove{
+    position: absolute;
+    right:60px;
+    top: 0px;
+}
+.detail hr{
+    border: 2px solid #dcdcdc;
+}
+.detail .middle{
+    padding: 50px 47px;
+}
+.detail .middle .bigTitle{
+    font-size: 30px;
+    color: #333333;
+    line-height: 60px;
+}
+.detail .middle .smallTitle{
+    font-size: 24px;
+    color: #333333;
+    position: relative;
+    line-height: 20px;
+}
+.detail .middle .smallTitle:before{
+    content: "";
+    position: absolute;
+    width: 97px;
+    height: 2px;
+    background: #f27780;
+    left: 0;
+    top:30px;
+}
+.detail .middle .tag{
+    font-size: 22px;
+    color: #999999;
+    line-height: 80px;
+}
+.detail .middle .font{
+    font-size: 22px;
+    color: #999999;
+    line-height: 40px;
+    margin-top: 30px;
+}
